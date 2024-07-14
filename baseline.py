@@ -3,14 +3,14 @@ import cv2.aruco as aruco
 
 def main():
     # Change the index to the correct one for your USB camera
-    cap = cv2.VideoCapture(2)  # Replace 1 with the correct index
+    cap = cv2.VideoCapture(0)  # Replace 1 with the correct index
 
     if not cap.isOpened():
         print("Error: Could not open camera.")
         return
 
     # Load the dictionary that was used to generate the markers.
-    aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_6X6_250)
+    aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_4X4_250)
     parameters = aruco.DetectorParameters()
 
     while True:
